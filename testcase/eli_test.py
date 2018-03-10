@@ -17,7 +17,7 @@ class eli_login(unittest.TestCase):
 
     def tearDown(self):
         self.dl.app_stop(yl['setup']['page'])
-    def test_1login_login(self):
+    def tes1t_1login_login(self):
         self.dl.set_fastinput_ime(True)
         self.dl(resourceId=yl['login_t']['un_input']).set_text('13226349780')
         self.dl(resourceId=yl['login_t']['password']).click_exists(timeout=3)
@@ -31,7 +31,7 @@ class eli_login(unittest.TestCase):
         #print(acq[-1])
         assert (acq[-1] == yl['login_t']['la'])
 
-    def test_2_ls(self):
+    def tes1t_2_ls(self):
         self.dl(resourceId = yl['test_ls']['skip']).click_exists(timeout=3)
         self.dl(className = yl['test_ls']['nav']).click_exists(timeout=3)
         self.dl(resourceId = yl['test_ls']['login_btn']).click_exists(timeout=3)
@@ -47,10 +47,12 @@ class eli_login(unittest.TestCase):
         print(course[1])
         course[1].click()
         self.dl.swipe(579,1500,579,800,0.5)
+
+        #sleep(10)
         self.dl(resourceId = yl['test_lk']['join']).click()
         ac = self.dl.current_app()
         acq = ac['activity'].split('.')
-        # print(acq[-1])
+        #print(acq[-1])
         assert (acq[-1] == yl['test_lk']['la'])
 
 
