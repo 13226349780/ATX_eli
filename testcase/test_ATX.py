@@ -17,5 +17,13 @@ import cv2
 #print(orientation)
 #d.open_notification()
 #d.open_quick_settings()
-#d.open_quick_settings()
 
+from utils.getyaml import yl
+"""
+print(yl['setup']['page'])
+import uiautomator2 as u2
+
+d= u2.connect('956b23ec')
+print(d.device_info)
+"""
+print(yl['login_t']['input'])

@@ -2,3 +2,30 @@ setup:
   devices: 956b23ec
   page: cn.eliteu.android
   
+
+login_t:
+  info: 帐号密码登录
+  nav: android.widget.ImageButton
+  un_input: cn.eliteu.android:id/email_et
+  username: 13226349780
+  password: cn.eliteu.android:id/password_et
+  login: cn.eliteu.android:id/login_button_layout
+  la: LoginActivity
+
+test_ls:
+  info: 跳过后登录
+  skip: cn.eliteu.android:id/actionbar_skip_btn
+  mainye:  .MyCoursesListActivity
+  nav: android.widget.ImageButton
+  login_btn: cn.eliteu.android:id/navigation_login_button
+  la: LoginActivity
+
+test_lk:
+  info: 到课程内登录
+  la: LoginActivity
+  skip:  cn.eliteu.android:id/actionbar_skip_btn
+  mainye: .MyCoursesListActivity
+  select: cn.eliteu.android:id/course_btn
+  courses: android.widget.RelativeLayout
+  wa: EliteuCourseDetailActivity
+  join: cn.eliteu.android:id/button_enroll_now
