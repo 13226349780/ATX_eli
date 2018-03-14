@@ -10,6 +10,7 @@ from utils.getyaml import yl
 class eli_login(unittest.TestCase):
     def setUp(self):
         self.dl = u2.connect(yl['setup']['devices'])
+
         #print(self.dl.device_info)
         self.dl.app_clear(yl['setup']['page'])
         #清除数据，=重新装一次
@@ -46,13 +47,14 @@ class eli_login(unittest.TestCase):
         course = self.dl(className = yl['test_lk']['courses'])
         print(course[1])
         course[1].click()
-        self.dl.swipe(579, 1500, 579, 800, 0.5)
+        self.dl.swipe(579, 1500, 579, 800, duration = 0.5)
         #sleep(10)
         self.dl(resourceId = yl['test_lk']['join']).click()
         ac = self.dl.current_app()
         acq = ac['activity'].split('.')
         #print(acq[-1])
         assert (acq[-1] == yl['test_lk']['la'])
+
 
 
 

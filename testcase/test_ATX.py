@@ -25,5 +25,9 @@ import uiautomator2 as u2
 
 d= u2.connect('956b23ec')
 print(d.device_info)
-"""
 print(yl['login_t']['input'])
+"""
+import uiautomator2 as u2
+d = u2.connect('956b23ec')
+print(d.device_info)
+d.app_install('http://imtt.dd.qq.com/16891/9D5F1DBA326B2A33CF587448AFE84F56.apk?fsname=cn.eliteu.android_1.2.3_123.apk&csr=1bbd')
